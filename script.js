@@ -1,7 +1,5 @@
-const page = document.getElementById('page');
 const prelouder = document.getElementById('prelouder');
 setInterval(() => {
-page.classList.remove('hidden');
 prelouder.classList.add('hidden');
 }, 5000);
 const getInfo = fetch('https://api.github.com/users/6thSence')
