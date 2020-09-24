@@ -1,7 +1,3 @@
-const prelouder = document.getElementById('prelouder');
-setInterval(() => {
-prelouder.classList.add('hidden');
-}, 5000);
 const getInfo = fetch('https://api.github.com/users/6thSence')
 const getDate = new Promise ((resolve, reject) => {
 const newDate = new Date().getDate() + '-' + new Date().getMonth() + '-' + new Date().getFullYear();
@@ -30,5 +26,7 @@ document.body.append(gitHubUser);
 document.body.append(gitHubUser_name);
 document.body.append(gitHubUser_avatar);
 document.body.append(gitHubUser_bio);
+const prelouder = document.getElementById('prelouder');
+prelouder.style.display = 'none';
   })
   .catch(error => console.log('Информация о пользователе недоступна'));
