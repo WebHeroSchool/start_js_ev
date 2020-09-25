@@ -1,8 +1,8 @@
-const getInfo = fetch('https://api.github.com/users/6thSence')
+const getInfo = fetch('https://api.github.com/users/6thSence');
 const getDate = new Promise ((resolve, reject) => {
 const newDate = new Date().getDate() + '-' + new Date().getMonth() + '-' + new Date().getFullYear();
 setTimeout(() => newDate ? resolve(newDate) : reject('Дата не определена'), 5000);
-})
+});
 Promise.all([getInfo, getDate]) 
 .then(newDate => {
 const Date = document.createElement('p');
